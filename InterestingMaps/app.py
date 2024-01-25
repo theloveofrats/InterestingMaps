@@ -29,6 +29,7 @@ df = df[mask]
 #APP CODE
 app = Dash(__name__)
 app.layout = html.Div([
+    html.H1("Per capita GDP map by year", style={'textAlign': 'center'}),
     html.Div([
         dcc.Graph(id='map-box', figure=px.choropleth_mapbox(df, geojson=countries, featureidkey="properties.adm0_a3", locations='adm0_a3', color='2022',
                            color_continuous_scale="Viridis",
